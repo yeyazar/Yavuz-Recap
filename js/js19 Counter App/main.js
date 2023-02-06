@@ -1,14 +1,20 @@
-const users = [
-  { id: 0, name: "ahmet", age: 25 },
-  { id: 1, name: "mehmet", age: 26 },
-  { id: 3, name: "dervis", age: 26 },
-];
+// butonlari al
+// butonlari tiklanmis mi dinle
+// tiklanirsa arttir ya da azalt
+//    // title'i bul ve arttir/azalt
+const incButton = document.querySelector(".arttir");
+const decButton = document.querySelector(".azalt");
+const number = document.querySelector("#numara");
 
-const findAges = (user) => user.age == 26;
+let initialNumber = 0;
 
-//const test = users.find((user) => user.age == 26);
+incButton.addEventListener("click", (event) => {
+  initialNumber++;
+  number.innerHTML = `<i>${initialNumber}</i>`
+  
+});
 
-const test = users.find(findAges);
-
-console.log(test);
-
+decButton.addEventListener("click", ()=> {
+  initialNumber--;
+  number.innerHTML= `<i>${initialNumber}</i>`
+})

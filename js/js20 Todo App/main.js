@@ -1,14 +1,57 @@
-const users = [
-  { id: 0, name: "ahmet", age: 25 },
-  { id: 1, name: "mehmet", age: 26 },
-  { id: 3, name: "dervis", age: 26 },
-];
+//add buttonunu dinle
+// tiklandiginda inputu al
+// yeni bit todo olustur
+// ve bunu DOM un icine koy
 
-const findAges = (user) => user.age == 26;
+{
+  /* <li class="todoItem">
+<button class="completeButton">Complete</button>
+<button class="deleteButton">Delete</button>
+<p class="todoText">Test something</p>
+</li>
+<li class="todoItem completed">
+<button class="completeButton">Complete</button>
+<button class="deleteButton">Delete</button>
+<p class="todoText">Test something</p>
+</li> */
+}
 
-//const test = users.find((user) => user.age == 26);
+const addTaskButton = document.querySelector(".addTask");
+const todoInput = document.querySelector(".todoInput");
+const todosContainer = document.querySelector(".todos");
 
-const test = users.find(findAges);
+console.log(addTaskButton, todoInput);
 
-console.log(test);
+const renderTodoItem = (todoText) => {
+  const todoItemElement = document.createElement("li");
+  todoItemElement.classList.add("todoItem");
+  // todoItemElement.innerText = todoText;
 
+  const completeButton = document.createElement("button");
+  completeButton.classList.add("completeButton");
+  completeButton.innerText = "Complete";
+  todoItemElement.appendChild(completeButton);
+
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("deleteButton");
+  deleteButton.innerText = "Delete";
+  todoItemElement.appendChild(deleteButton);
+
+  const textElement = document.createElement("p");
+  textElement.innerText = todoText;
+  todoItemElement.appendChild(textElement);
+
+  todosContainer.appendChild(todoItemElement);
+  todoInput.value = "";
+  todoInput.focus();
+};
+
+const addTask = () => {
+  if (todoInput.value === "") {
+    alert("Input cannot be empty!");
+  } else {
+    renderTodoItem(todoInput.value);
+  }
+  console.log(todoInput.value);
+};
+addTaskButton.addEventListener("click", addTask);
