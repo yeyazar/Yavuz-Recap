@@ -1,14 +1,28 @@
-const users = [
-  { id: 0, name: "ahmet", age: 25 },
-  { id: 1, name: "mehmet", age: 26 },
-  { id: 3, name: "dervis", age: 26 },
-];
+function getUser(callback) {
+  setTimeout(() => {
+    callback({ username: "mehmet" });
+  }, 2000);
+}
 
-const findAges = (user) => user.age == 26;
+function getUserAdresses(username, callback) {
+  setTimeout(() => {
+    callback(["ankara", "mugla", "eskisehir"]);
+  }, 1000);
+}
 
-//const test = users.find((user) => user.age == 26);
+function getRestaurants(addresses, callback) {
+  setTimeout(() => {
+    callback(["A restaurant", "B restaurant", "C restaurant"]);
+  }, 1000);
+}
 
-const test = users.find(findAges);
+getUser((user) => {
+  getUserAdresses(user.username, (addresses) => {
+    getRestaurants(addresses, (openRestaurants) => {
+      document.body.append("Acik restorantlar :", openRestaurants.toString());
+    });
+    console.log(addresses);
+  });
+});
 
-console.log(test);
-
+console.log("ikinci consol");
