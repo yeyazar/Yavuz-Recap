@@ -7,3 +7,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+p{
+  font-size: 2rem;
+}
+
+header{
+  padding: 1.2rem;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+
+footer{
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
