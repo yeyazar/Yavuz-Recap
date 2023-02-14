@@ -1,9 +1,20 @@
 import Person from "./components/Person";
+import data from "./data";
 
 function App() {
   return (
     <div>
-      <Person
+      {data.map(({ name, img, tel }) => {
+        /* const { name, img, tel } = item; */
+        return <Person name={name} img={img} tel={tel} />;
+      })}
+    </div>
+  );
+}
+
+export default App;
+
+/* {/* <Person
         name="Vega"
         img="https://cdn.pixabay.com/photo/2022/03/23/18/56/beach-7087722_640.jpg"
         tel="+49 12 123 12 12"
@@ -17,9 +28,4 @@ function App() {
         name="Xagev"
         img="https://cdn.pixabay.com/photo/2023/02/07/13/39/monkey-7774171_640.jpg"
         tel="+44 12 123 12 12"
-      />
-    </div>
-  );
-}
-
-export default App;
+      /> */

@@ -7,7 +7,7 @@ const Person = ({ name, tel, img }) => {
   /* const {name, tel, img} =props */
   return (
     <div>
-      {/* <h2>Hallo, Ich heiße {name}</h2> */}
+      {/* Msg component is called */}
       <Msg name={name}/>
       <img style={{ width: "300px" }} src={img} alt="" />
       <p>tel is {tel}</p>
