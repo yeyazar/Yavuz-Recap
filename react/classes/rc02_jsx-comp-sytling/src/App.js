@@ -1,9 +1,15 @@
+import { Footer } from "./Footer";
+import Header from "./Header";
+
+//* App Componenti
 function App() {
   return (
-    <div>
-      <h1>Hi React</h1>
-    </div>
-  )
+    //* jsx
+    <>
+      <Header />
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
