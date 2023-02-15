@@ -1,9 +1,11 @@
-import "./Buton.css"
+import ButonStyle from "./Buton.module.css";
 
-const Buton = ({bt}) => {
+const Buton = ({ btn }) => {
   return (
-    <div>{bt}</div>
-  )
-}
+    <div className={ButonStyle["title"]}>
+      <button className={ButonStyle["btn-blue"]}>{btn}</button>
+    </div>
+  );
+};
 
-export default Buton
+export default Buton;

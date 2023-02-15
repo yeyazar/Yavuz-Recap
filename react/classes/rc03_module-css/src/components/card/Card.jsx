@@ -1,12 +1,12 @@
 import Buton from "../buton/Buton";
-import "./Card.css";
+import CardStyle from "./Card.module.css";
 
-const Card = ({id, lang, img, btn}) => {
+const Card = ({ id, lang, img, btn }) => {
   return (
     <div>
-      <h1>{lang}</h1>
-      <img src={img} alt="" />
-      <Buton bt={btn} />
+      <h1 className={CardStyle.title}>{lang}</h1>
+      <img className={CardStyle.images} src={img} alt="" />
+      <Buton btn={btn} />
     </div>
   );
 };
