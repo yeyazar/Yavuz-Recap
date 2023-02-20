@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Form = () => {
+const FormWithObject = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,7 +26,7 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2 className="display-6 text-primary">FORMS</h2>
+      <h2 className="display-6 text-primary">FORMS with OBJECT</h2>
 
       <div className="mb-3">
         <label htmlFor="username" className="form-label">
@@ -78,4 +78,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormWithObject;
