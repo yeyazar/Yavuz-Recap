@@ -1,13 +1,20 @@
 import { useState } from "react";
 
 const FormWithObject = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    address: "",
+  });
 
-  const handleUsername = (e) => {
-    console.log(e);
-    setUsername("" + e.target.value);
+  //! Destr.
+  const { username, email, password, address } = formData;
+
+  const handleFromData = (e) => {
+    /*  console.log(e.target.value);
+    console.log(e.target.id); */
+    setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
   const handleSubmit = (e) => {
@@ -17,11 +24,10 @@ const FormWithObject = () => {
     Username: ${username}
     E-mail: ${email}
     password: ${password}
+    Address: ${address}
     `);
 
-    setEmail("");
-    setPassword("");
-    setUsername("");
+    setFormData({ username: "", email: "", password: "", address: "" });
   };
 
   return (
@@ -36,7 +42,7 @@ const FormWithObject = () => {
           type="text"
           className="form-control"
           id="username"
-          onChange={handleUsername}
+          onChange={handleFromData}
           value={username}
           placeholder={"Enter your username..."}
         />
@@ -50,7 +56,7 @@ const FormWithObject = () => {
           type="email"
           className="form-control"
           id="email"
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={handleFromData}
           value={email}
           placeholder={"Enter your email..."}
         />
@@ -64,10 +70,24 @@ const FormWithObject = () => {
           type="password"
           className="form-control"
           id="password"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={handleFromData}
           value={password}
           placeholder={"Enter your password..."}
           required
+        />
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="address" className="form-label">
+          Address
+        </label>
+        <input
+          type="text"
+          className="form-control"
+          id="address"
+          onChange={handleFromData}
+          value={address}
+          placeholder={"Enter your address... (optional)"}
         />
       </div>
 
