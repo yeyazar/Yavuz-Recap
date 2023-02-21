@@ -29,6 +29,15 @@ const KeyboardClipboard = () => {
     e.preventDefault();
   };
 
+  const handleParCopy = (e) => {
+    e.preventDefault();
+    alert("You cant copy");
+  };
+  const handleParCut = (e) => {
+    e.preventDefault();
+    alert("You cant cut");
+  };
+
   return (
     <div className="container text-center">
       <h2 className="display-5 text-danger">Keyboard-Clipboard Event</h2>
@@ -41,11 +50,8 @@ const KeyboardClipboard = () => {
       />
 
       <div className="text-start mt-4">
-        <h6>
-          Copied Input Data:{" "}
-          {/* <span className="">{inputData.toLowerCase()}</span> */}
-        </h6>
-        <p className="text-start mt-2">{inputData.toLowerCase()}</p>
+        <h6>Copied Input Data:</h6>
+        <p onCopy={handleParCopy} onCut={handleParCut}>{inputData.toLowerCase()}</p>
       </div>
 
       <textarea
