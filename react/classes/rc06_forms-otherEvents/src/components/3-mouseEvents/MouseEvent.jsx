@@ -1,9 +1,16 @@
 const MouseEvent = () => {
+  let desc = "";
+
   return (
     <div className="container text-center d-flex flex-column align-items-center mt-4">
       <h2 className="text-danger">MOUSE EVENTS</h2>
 
-      <div id="todo-1" className="bg-success text-light w-50 p-4">
+      <div
+        id="todo-1"
+        className="bg-success text-light w-50 p-4"
+        onMouseOver={""}
+        /* onMouseOut={""} */
+      >
         todo item 1
       </div>
 
@@ -20,7 +27,7 @@ const MouseEvent = () => {
         {"X"} {"Y"}
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default MouseEvent
+export default MouseEvent;
