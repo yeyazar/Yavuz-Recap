@@ -25,9 +25,9 @@ const User = () => {
       <h4>{user?.email}</h4>
       <h5>Tel: {user?.phone}</h5>
       <p>Age: {user?.dob?.age}</p>
-      <p>Date of Birth: {user?.dob?.date}</p>
+      <p>Date of Birth: {new Date(user?.dob?.date).toLocaleDateString("en-GB")}</p>
 
-      <button className="btn btn-warning" onClick={getUser}>
+      <button className="btn btn-primary" onClick={getUser}>
         Get User
       </button>
     </div>
