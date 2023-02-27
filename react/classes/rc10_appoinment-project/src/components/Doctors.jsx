@@ -1,11 +1,25 @@
-import Container from "react-bootstrap/Container"
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
-const Doctors = () => {
+const Doctors = ({ doctors }) => {
   return (
     <Container className="p-2">
-      <h1>Doctors</h1>
-    </Container>
-  )
-}
+      <h3 className="display-6" style={{ color: "rgb(166, 18, 189)" }}>
+        Our Doctors
+      </h3>
 
-export default Doctors
+      <Row>
+        {doctors.map((dr) => (
+          <Col key={dr.id} sm={6} md={4} lg={3}>
+            <img src={dr.img} alt={dr.name} />
+            <h4>{dr.name}</h4>
+            <h5>{dr.dep}</h5>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
+};
+
+export default Doctors;
