@@ -9,21 +9,20 @@ const Home = () => {
   const [appointments, setAppointments] = useState(appointmentData);
 
   //! Mock data yerine API'den veri cekilseydi
-  /* const getAppointments = () =>{
-    try {
-      await {data} = await axios.get("url")
-      setAppointments(data)
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  useEffect(() => {
-    getAppointments()
-  }, []) */
-
+  // const getAppointments = () =>{
+  //   try {
+  //     await {data} = await axios.get("url")
+  //     setAppointments(data)
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+  // useEffect(() => {
+  //   getAppointments()
+  // }, [])
 
   console.log(appointments);
-  console.log(doctors);
+  //  console.log(doctors);
 
   return (
     <main className="text-center mt-2 vh-100">
@@ -33,7 +32,10 @@ const Home = () => {
         appointments={appointments}
         setAppointments={setAppointments}
       />
-      <AppointmentList />
+      <AppointmentList
+        appointments={appointments}
+        setAppointments={setAppointments}
+      />
     </main>
   );
 };
