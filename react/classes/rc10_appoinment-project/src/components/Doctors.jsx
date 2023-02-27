@@ -9,12 +9,11 @@ const Doctors = ({ doctors }) => {
   const [selectedDrName, setSelectedDrName] = useState("");
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  /* const handleShow = () => setShow(true); */
 
   const handleClick = (drName) => {
-    handleShow();
+    setShow(true);
     setSelectedDrName(drName);
-    console.log(drName);
   };
 
   return (
@@ -40,7 +39,7 @@ const Doctors = ({ doctors }) => {
       <AddModal
         show={show}
         handleClose={handleClose}
-        selectedDrName={selectedDrName}
+        drName={selectedDrName}
       />
     </Container>
   );

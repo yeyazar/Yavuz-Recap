@@ -2,12 +2,12 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
-export function AddModal({ show, handleClose, selectedDrName }) {
+export function AddModal({ show, handleClose, drName }) {
   return (
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title className="text-danger">Appointment for ...</Modal.Title>
+          <Modal.Title className="text-danger">Appointment for {drName}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
