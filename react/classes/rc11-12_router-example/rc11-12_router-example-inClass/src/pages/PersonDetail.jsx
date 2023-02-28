@@ -1,10 +1,24 @@
-import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const PersonDetail = () => {
   const navigate = useNavigate();
-  const { state: person } = useLocation();
-  console.log(person);
+  //   const { state: person } = useLocation();
+  const { id } = useParams();
+  console.log(id);
+
+  const [person, setPerson] = useState({});
+
+  const getPerson = () => {
+    fetch(`https://reqres.in/api/users/${id}`)
+      .then((res) => res.json())
+      .then((data) => setPerson(data.data))
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    getPerson();
+  }, []);
 
   return (
     <div className="container text-center">

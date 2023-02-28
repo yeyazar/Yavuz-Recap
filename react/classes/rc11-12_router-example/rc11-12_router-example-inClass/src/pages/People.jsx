@@ -24,7 +24,7 @@ const People = () => {
           return (
             <div
               key={id}
-              className="border col-xs-6 col-sm-6 col-md-6 col-lg-4"
+              className="border border-info col-5 col-sm-6 col-md-6 col-lg-4"
               type="button"
               //? Absolute path (full address)
               //onClick={()=> navigate(`/people/${id}`)}
