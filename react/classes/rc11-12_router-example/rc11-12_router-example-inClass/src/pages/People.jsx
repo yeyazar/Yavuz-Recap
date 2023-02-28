@@ -24,10 +24,12 @@ const People = () => {
           return (
             <div
               key={id}
-              className="col-sm-12 col-md-6 col-lg-4"
+              className="border col-xs-6 col-sm-6 col-md-6 col-lg-4"
               type="button"
-              //? Absolute path
-              onClick={()=> navigate(`/people/${id}`)}
+              //? Absolute path (full address)
+              //onClick={()=> navigate(`/people/${id}`)}
+              //! Relative path (relative address)
+              onClick={() => navigate(`${id}`, { state: person })}
             >
               <img className="rounded" src={avatar} alt="img" />
               <h6>
