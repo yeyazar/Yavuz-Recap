@@ -1,17 +1,33 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Nav = () => {
   return (
     <ul>
       <li>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="/instructors">Instructors</a>
+        <NavLink
+          to="/instructors"
+          style={({ isActive }) => ({
+            color: isActive && "red",
+          })}
+        >
+          Instructors
+        </NavLink>
       </li>
       <li>
-        <a href="/contact">Contact</a>
+        <NavLink
+          to="/contact"
+          style={({ isActive }) => ({
+            color: isActive && "red",
+          })}
+        >
+          Contact
+        </NavLink>
       </li>
     </ul>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
