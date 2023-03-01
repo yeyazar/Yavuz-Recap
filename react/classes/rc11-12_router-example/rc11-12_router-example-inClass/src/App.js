@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import { Routes, Route } from "react-router-dom";
 import Paths from "./pages/Paths";
 import FullStack from "./pages/Fullstack";
+import PrivateRouter from "./pages/PrivateRouter";
 import Aws from "./pages/Aws";
 
 function App() {
@@ -19,7 +20,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/people" element={<People />} />
         <Route path="/people/:id" element={<PersonDetail />} />
-        <Route path="/contact" element={<Contact />} />
+
+        <Route path="/contact" element={<PrivateRouter/>}>
+          <Route path="" element={<Contact />} />
+        </Route>
 
         <Route path="/paths" element={<Paths />}>
           <Route path="" element={<FullStack />} />
