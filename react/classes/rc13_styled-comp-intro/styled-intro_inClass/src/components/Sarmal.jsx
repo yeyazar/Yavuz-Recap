@@ -5,6 +5,10 @@ display: flex;
 flex-direction: column;
 align-items: center;
 background-color: ${({bg})=> bg || "grey"};
+gap: 1rem;
+padding: 1rem;
+width: 50vw;
+margin: auto;
 `
 
 export default Sarmal
