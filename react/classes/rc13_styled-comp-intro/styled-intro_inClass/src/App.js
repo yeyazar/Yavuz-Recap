@@ -1,10 +1,11 @@
 import { Button } from "./components/Buton.styled";
 import { FS13Button } from "./components/Buton.styled";
+import HeaderText from "./components/HeaderText";
 
 const App = () => {
   return (
     <>
-      <h1>Styled Components</h1>
+      <HeaderText color="green">Styled Components</HeaderText>
       <Button>Send</Button>
       <Button primary>Send</Button>
       <FS13Button react>Work</FS13Button>
