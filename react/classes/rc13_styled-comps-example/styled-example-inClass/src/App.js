@@ -1,7 +1,10 @@
+import Button from "./components/styled/Button";
+
 const App = () => {
   return (
     <>
-      <h1>APP</h1>
+      <Button color="#AF3A53">Apply Courses</Button>
+      <Button bg="#AF3A53">Talk to Adviser</Button>
     </>
   );
 };
