@@ -8,7 +8,7 @@ const App = () => {
       <Button>Send</Button>
       <Button primary>Send</Button>
       <FS13Button react>Work</FS13Button>
-      <FS13Button >Work fckin More!</FS13Button>
+      <FS13Button >More!</FS13Button>
     </>
   );
 };
