@@ -1,27 +1,39 @@
 #include <iostream>
 using namespace std;
 
+class Loft {
+    public:
+        int rooms;
+        string homeAddress;
+        int space;
+
+        void intro() {
+            cout << "My 1-home in " << homeAddress << " has " << rooms << " rooms " << " with a " << space << "sq.meters space." << endl;
+        }
+
+        void intro2();
+};
+
+void Loft::intro2(){
+    cout << "My 2-home in " << homeAddress << " has " << rooms << " rooms " << " with a " << space << "sq.meters space." << endl;
+
+    cout << "Hi!" << endl;
+};
+
 int main(){
 
-    cout << "Break / Continue" << endl;
+    cout << "Classes" << endl;
 
-    int i= 0;
-    while(i<10){
-        cout << i << "\n";
-        i++;
-        if (i==4){
-            break;
-        }
-    }
+    Loft gutenbergstr;
+    gutenbergstr.rooms=1;
+    gutenbergstr.homeAddress="Gutenbergstr 20a";
+    gutenbergstr.space=31;
 
-    int j= 0;
-    while(j<10){
-        cout << j << "\n";
-        j++;
-        if (j==4){
-            continue;
-        }
-    }
+    // cout << "My home in " << gutenbergstr.homeAddress << " has " << gutenbergstr.rooms << " rooms " << " with a " << gutenbergstr.space << "sq.meters space." << endl;
+
+    gutenbergstr.intro();
+    gutenbergstr.intro2();
+    
 
     
     return 0;
