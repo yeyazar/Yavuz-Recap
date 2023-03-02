@@ -8,7 +8,11 @@ const Flex = styled.div`
   gap: 1rem;
 
 
-  @media (max-width: 700px) {
+  /* @media (max-width: 700px) {
+    flex-direction: column;
+  } */
+
+  @media (max-width: ${( {theme} ) => theme.breakpoints.md}) {
     flex-direction: column;
   }
 
