@@ -5,11 +5,14 @@ const Header = () => {
   return (
     <div>
       <Nav>
-        <img src="./images/logo.png" width={"300px"} alt="logo" />
-        
+        <div>
+          <img src="./images/logo.png" width={"300px"} alt="logo" />
+        </div>
+
+        <div>
           <Button color="#AF3A53">Apply Courses</Button>
           <Button bg="#AF3A53">Talk to Adviser</Button>
-        
+        </div>
       </Nav>
     </div>
   );
