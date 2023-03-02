@@ -1,10 +1,9 @@
-import Button from "./components/styled/Button";
+import Header from "./components/Header";
 
 const App = () => {
   return (
     <>
-      <Button color="#AF3A53">Apply Courses</Button>
-      <Button bg="#AF3A53">Talk to Adviser</Button>
+      <Header/>
     </>
   );
 };
