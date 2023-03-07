@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
         text-transform: uppercase;
         font-family: 'Shantell Sans', cursive;
-        color: white
+        /* color: white */
         
     }
     body{
