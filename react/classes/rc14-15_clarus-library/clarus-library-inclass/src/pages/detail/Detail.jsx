@@ -23,9 +23,9 @@ const Detail = () => {
       <Description>{state.volumeInfo.description}</Description>
 
       <InfoPart>
-        Published Date: {state.volumeInfo.publishedDate}
+        Published Date: {state.volumeInfo.publishedDate}{" "}
         {state.volumeInfo.publisher && (
-          <span> / Publisher: {state.volumeInfo.publisher}</span>
+          <span>/ Publisher: {state.volumeInfo.publisher}</span>
         )}
       </InfoPart>
       <InfoPart>
