@@ -9,6 +9,9 @@ export const HeaderTitle = styled.h2`
   margin-top: 1rem;
   font-size: 3rem;
   color: ${({ theme }) => theme.colors.detailColor};
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    font-size: 1.5rem;
+  } ;
 `;
 
 export const HeaderForm = styled.form`
@@ -23,11 +26,11 @@ export const HeaderForm = styled.form`
   -webkit-backdrop-filter: blur(8.3px);
   border: 1px solid rgba(15, 63, 42, 0.3);
   margin: 20px;
-
   @media (max-width: ${({ theme }) => theme.screens.lg}) {
-    width: 100%;
+    width: 90%;
     border-radius: 5px;
   } ;
+  
 `;
 
 export const SearchInput = styled.input`
@@ -44,7 +47,12 @@ export const SearchInput = styled.input`
   background-color: rgb(255, 255, 255, 0.5);
   ::placeholder {
     text-transform: capitalize;
+    
   }
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    width: 90%;
+    border-radius: 5px;
+  } ;
 `;
 
 export const SelectBox = styled.select`
@@ -60,7 +68,7 @@ export const SelectBox = styled.select`
   background-color: rgb(255, 255, 255, 0.8);
   border-bottom-right-radius: 1rem;
   @media (max-width: ${({ theme }) => theme.screens.lg}) {
-    width: 100%;
+    width: 90%;
     border-radius: 5px;
   } ;
 `;
