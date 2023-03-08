@@ -9,11 +9,11 @@ const Home = () => {
       <Header/>
 
       <HomeImage>
-        <img src={homeImage} alt="home-image"/>
+        <img src={homeImage} alt="home-image" />
       </HomeImage>
 
       <MainContainer>
-        
+
       </MainContainer>
 
     </HomeContainer>

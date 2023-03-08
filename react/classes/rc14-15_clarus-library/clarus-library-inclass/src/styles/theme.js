@@ -1,8 +1,8 @@
 //create theme
 export const theme = {
     colors:{
-        navbarBgColor: "#2E4D91",
-        mainColor: "#131F4A",
+        navbarBgColor: "#131F4A",
+        mainColor: "#2E4D91",
         logoColor: "#8DC1B9",
         linkColor: "#F5CCB8",
         linkHoverColor: "#F0B4AE",
