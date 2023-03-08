@@ -30,7 +30,6 @@ export const HeaderForm = styled.form`
     width: 90%;
     border-radius: 5px;
   } ;
-  
 `;
 
 export const SearchInput = styled.input`
@@ -47,7 +46,6 @@ export const SearchInput = styled.input`
   background-color: rgb(255, 255, 255, 0.5);
   ::placeholder {
     text-transform: capitalize;
-    
   }
   @media (max-width: ${({ theme }) => theme.screens.lg}) {
     width: 90%;
@@ -90,6 +88,7 @@ export const HeaderButton = styled.button`
     transition: all 0.3s ease-in;
   }
   @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    width: 40%;
     border-radius: 5px;
   } ;
 `;
