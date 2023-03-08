@@ -3,7 +3,10 @@ import Flex from "../../styles/Flex";
 
 export const DetailContainer = styled(Flex)`
   flex-direction: column;
+  margin: 2rem;
   padding: 1rem;
+  border-radius: 20%;
+  background-color: ${({ theme }) => theme.colors.linkColor};
 `;
 
 export const DetailTitle = styled.h1`
@@ -30,7 +33,7 @@ export const InfoPart = styled.div`
   font-size: 1.4rem;
   margin: 2rem;
   text-align: center;
-  span{
+  span {
     margin: 1rem;
   }
 `;
