@@ -23,6 +23,7 @@ export const CardHeader = styled.h1`
   text-align: center;
   overflow: hidden;
   height: 5rem;
+  color: white;
 `;
 
 export const CardImg = styled.img`
