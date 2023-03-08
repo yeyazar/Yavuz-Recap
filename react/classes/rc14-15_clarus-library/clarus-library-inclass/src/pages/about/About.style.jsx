@@ -30,6 +30,5 @@ export const IconContainer = styled.div`
   a{
     color: gray;
     padding: 1rem;
-    
   }
 `;
